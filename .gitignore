@@ -1,0 +1,4 @@
+build
+bindings/c
+Cargo.lock
+target
