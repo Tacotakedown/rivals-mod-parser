@@ -1,0 +1,23 @@
+[package]
+name = "mod-parser-rs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "mod_parser"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+libc = "0.2"
+thiserror = "1.0"
+
+[build-dependencies]
+cc = "1.0"
+
+[target.x86_64-pc-windows-msvc]
+rustflags = [
+    "-C",
+    "link-arg=/NODEFAULTLIB:libcmt",
+    "-C",
+    "link-arg=mod_parser.lib",
+]

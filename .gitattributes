@@ -1,2 +1,4 @@
 bindings/ export-ignore
 scripts/ export-ignore
+bindings/* linguist-vendored
+scripts/* linguist-vendored
